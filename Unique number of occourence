@@ -4,7 +4,7 @@ public:
         vector<int> ans;
         int size = arr.size();
         int i = 0;
-        sort(arr.begin(), arr.end()); // Missing semicolon
+        sort(arr.begin(), arr.end());
 
         while (i < size) {
             int count = 1;
@@ -18,16 +18,16 @@ public:
             
             ans.push_back(count);
             i = i + count;
-        } // Missing closing curly brace
+        } 
 
         size = ans.size();
         sort(ans.begin(), ans.end());
 
-        for (int i = 0; i < size - 1; i++) { // Include the last element in the loop
+        for (int i = 0; i < size - 1; i++) { 
             if (ans[i] == ans[i + 1]) {
                 return false;
             }
         }
-        return true; // Missing semicolon
+        return true; 
     }
 };
