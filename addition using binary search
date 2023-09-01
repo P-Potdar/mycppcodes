@@ -1,0 +1,21 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int sumArray(int arr[],int n){
+    if(n<=0){
+        return false;
+    }
+    else
+    return arr[n-1]+sumArray(arr,n-1);
+}
+
+int main() {
+int arr[] = {5, 3, 1, 4, 2}; // Unsorted array
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    int sum = sumArray(arr, n);
+    
+    cout << "Sum of elements in the unsorted array: " << sum << endl;
+
+    return 0;
+}
