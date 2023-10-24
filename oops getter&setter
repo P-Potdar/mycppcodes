@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+
+
+
+
+class product{
+//private by default
+int id;
+char name[100];
+int mrp;
+int selling_price;
+public:
+void setmrp(int price){
+mrp=price;
+}
+void setselling_price(int price){
+    if(price>mrp){
+
+        selling_price=mrp;
+    }
+    else
+    selling_price=price;
+
+}
+int getmrp(){
+    return mrp;
+}
+int getselling_price(){
+    return selling_price;
+}
+
+
+
+};
+
+
+int main(){
+product camera;
+// camera.mrp=100;
+// camera.selling_price=2000;
+camera.setmrp(100);
+camera.setselling_price(30);
+cout<<"size "<<sizeof(camera)<<endl;
+cout<<"price "<<camera.getmrp()<<endl;
+cout<<"selling_price "<<camera.getselling_price()<<endl;
+}
